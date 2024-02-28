@@ -1,0 +1,521 @@
+/*general css for all webpages*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+  'header header header'
+  'nav nav nav'
+  'main main main'
+  'footer footer footer';
+}
+
+body, div, section, nav, main {
+	margin:0px;
+	font-family: Helvetica, Calibri, Arial, sans-seri;
+}
+
+/*remove the underline style in hyperlink*/
+a:link {
+  text-decoration: none;
+}
+
+/*make the scroll invisible*/
+::-webkit-Scrollbar{
+	width:0px;
+}
+
+/* header part*/
+header {
+	grid-area: header;
+	height:100%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers logo horizontally */
+}
+
+.logo img{
+	width:13%;
+    max-height: 100%; /*edit the size of the logo*/
+}
+
+/* social media icons */
+#socialmedia_container {
+	float:right;/*place social media icon to the right*/
+	width:150px;
+	height:5px;
+}
+
+
+.socialmedia_icon img{
+	float:right;
+	max-width: calc(40%/3);
+    max-height: 100%;
+    margin-right:20px;
+    opacity: 0.7;/*edit the logo appearance and alignment*/
+}
+
+/* main section of page */
+main{
+	grid-area: main;
+	height: calc(100vh - 120px);
+	overflow-y: scroll;
+	color:white;
+    position: relative;
+	width:100%;
+	margin: auto;
+	}
+
+/* main: take action now section*/
+.TakeActionNow_container, .AboutUs_container, .WhyCleanup_container{
+    position: relative;
+}
+
+.TakeActionNow_container img, .AboutUs_container img, .WhyCleanup_container img{
+    display: flex;
+    width: 100%;
+    height: 100%;/* fit image to the browser window*/
+}
+
+.TakeActionNow_text{
+  font-size: 3.9vw;
+  font-weight: bold;
+  position: absolute; /* stick text on image*/
+  bottom: 45%;
+  left: 3.5%;
+}
+
+.AboutUs_text {
+    font-size: 3.9vw;
+    text-align: right;
+    font-weight: bold;
+    position:absolute;  /*stick text on image*/
+    padding-left: 60%;
+    padding-right: 6%;
+    bottom:33%;
+    color: white;
+}
+
+.btn{
+  font-size: 2.3vw;
+  background-color: rgb(0,143,255);
+  font-weight: bold;
+  color: white;
+  position:absolute;/* stick button on image*/
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
+}
+#TakeActionNow_btn{
+  bottom: 26%;
+  left: 3.5%;
+  padding: 10px 20px;
+}
+
+#AboutUs_btn{
+  bottom: 20%;
+  left: 58%;
+  right: 6%;
+  padding: 9px 3px;
+}
+
+#WhyCleanup_btn{
+  bottom: 28%;
+  right: 50%;
+  padding: 9px 14px;
+}
+
+#Volunteer_btn{
+  bottom: 10%;
+  right: 56%;
+  padding: 9px 14px;
+}
+
+#DIYCleanup_btn{
+  bottom: 10%;
+  left: 56%;
+  padding: 9px 14px;
+}
+
+.btn:hover {
+  color: black;/* turn button text to black when hovered over*/
+}
+
+.AboutUs_container:before, .WhyCleanup_container:before{
+    content: "";
+    width: 100%;
+    right: 0;
+    top: -0.2%;
+    display: block;
+    position: absolute;
+    height: 10%;
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 150' preserveAspectRatio='none' style='height: 100%25; width: 100%25;'%3E%3Cpath d='M-6.49,49.83 C233.35,-153.45 180.86,334.03 505.36,66.61 L500.00,150.00 L0.00,150.00 Z' style='stroke: none; fill: %2332c1ff;'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.TakeActionNow_container:after, .AboutUs_container:after, .WhyCleanup_container:after{
+    content: "";
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    height: 10%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 150' preserveAspectRatio='none' style='height: 100%25; width: 100%25;'%3E%3Cpath d='M-6.49,49.83 C233.35,-153.45 180.86,334.03 505.36,66.61 L500.00,150.00 L0.00,150.00 Z' style='stroke: none; fill: %2332c1ff;'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.wave_container{
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    padding-top: 12%;
+    padding-bottom: 12%;
+    background-color: #32c1ff;
+}
+
+.wave_container h2{
+  font-size: 2.57vw;
+  text-align: center;
+  font-weight: bold;
+  position:absolute; /* stick text on image*/
+  top:15%;
+  padding-left: 12%;
+  padding-right: 12%;
+  line-height: 150%;
+}
+
+.CleanupTogether_container{
+    background-color: #32c1ff;
+    height: 600px;
+    max-width:100%;
+    position:relative;
+    display: flex;
+}
+
+.CleanupTogether_container h2{
+  font-size: 3vw;
+  text-align: center;
+  font-weight: bold;
+  position:absolute; /* stick text on image*/
+  top:8%;
+  padding-left: 25%;
+  padding-right: 25%;
+  line-height: 150%;  
+}
+
+.Volunteer_img{
+    display: flex;
+    width: 25%;
+    height: 60%;
+    left:8%;
+    bottom:18%;
+    position:absolute;
+    border:2px solid white;
+}
+
+#DIY_img{
+    display: flex;
+    width: 30%;
+    height: 60%;
+    left:51.5%;
+    bottom:18%;
+    position:absolute;
+    border:2px solid white;
+}
+
+
+/* sidebar or aside */
+/*
+#sidebar {
+	grid-area: sidebar;
+	border: 1px solid #aaa;
+	height: calc(100vh - 120px); view height - header - Top Nav Bar
+	padding: 10px;
+	overflow-y: scroll;
+	background-color:rgba(255,255,255,0.7);
+	color:black;
+}
+
+#sidebar div{
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+
+/*css for main section in jobs.html*/
+.grid-container_job {
+  display: grid;
+  grid-template-columns: 350px auto auto;
+  grid-template-areas:
+  'header header header'
+  'nav nav nav'
+  'sidebar main main'
+  'footer footer footer';
+}
+
+/* apply now button */
+#job_details button{
+	padding: 12px 30px;
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 8px 10px;
+	cursor: pointer;
+	border-radius:7px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#job_details h1{
+	text-align:center;
+	margin-bottom:0px;
+}
+
+#job_details h2{
+	padding-left: 15px;
+	margin-bottom:0px;
+}
+
+#job_details p, #job_details li{
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align:justify;
+}
+
+/* sidebar in jobs.html */
+/*
+#sidebar_job {
+	border: 1px solid #aaa;
+	grid-area: sidebar;
+	height: calc(100vh - 120px); view height - header - Top Nav Bar
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	padding: 10px;
+	overflow-y: scroll;
+	background-color:rgba(255,255,255,0.7);
+	color:black;
+}
+
+#sidebar_job a{
+	color:black;
+}
+
+#sidebar_job h2 {
+	text-align: center;
+}
+
+#sidebar_job div{
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#sidebar_job ul{
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	list-style: none;
+}
+
+#sidebar_job li{
+	padding: 0px;
+	padding-left: 2em;
+	margin-right: 5px;
+	margin-bottom: 3px;
+	list-style-position: inside;
+	list-style-type: circle;
+	text-indent: -1.3em;
+	text-align: left;
+}
+*/
+
+/* footer lists */
+/*
+footer {
+	grid-area: footer;
+    background-color: rgb(0,143,255)
+}
+
+footer a{
+	color:white;
+    font-weight: bold;
+}
+
+.List_footer *{
+	list-style: none;
+	padding: 0px;
+	
+}
+
+.List_footer {
+	float:left;
+	margin: 0px 20px;
+}
+
+.List_footer_subbullet li{
+	text-align: left;
+}
+*/
+
+news inside main section in index.html
+.main1 {
+	position: relative;
+	width:100%;
+	margin: 0px;
+}
+
+.main1 img{
+	position: relative;
+	width:100%;
+}
+
+.news_text{
+	position: absolute;
+	left: 0px;
+	right:0px;
+	bottom: 0px;
+	padding: 10px 30px;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	background-color: rgba(0,0,0);
+	border-radius: 0px 0px 20px 20px;
+	user-select: none;
+	z-index:2;
+}
+
+.news_detail{
+	position: absolute;
+	left: 0px;
+	right:0px;
+	top: 0px;
+	height:0px;
+	padding: 0px 20px;
+	text-align:justify;
+	font-size: 24px;
+	color: white;
+	background-color: rgba(0,0,0);
+	border-radius: 20px 20px 0px 0px;
+	user-select: none;
+	z-index:2;
+	overflow: hidden;
+	transition: .5s ease;
+}
+
+.news_content:hover .news_detail{
+	padding: 10px 20px;
+	height: auto;
+}
+
+/*Destop size- keep display nav bar*/
+@media only screen and (min-width: 571px){
+    nav {
+      grid-area: nav;
+      background-color: rgb(255,255,255);
+      text-align: center;
+      width:100%;
+	  height:100%;
+      padding-bottom: 10px;
+   }
+    
+    label{
+        margin: 0 40px 0 0;
+        font-size: : 26px;
+        text-align: center;
+        display:none;
+    }
+    
+    #toggle{
+        display:none;
+    }
+    
+    nav ol{
+        list-style: none;
+        margin:0;
+        padding: 0px;
+        text-align: center;
+    }
+    
+    nav li{
+        display: inline;
+        padding: 0px;
+        float: center;
+    }
+    
+    nav li a {
+        margin:0px;
+	    height:16px;
+        color: rgb(70,193,255);
+        font-weight: bold;
+	    font-size:1em;
+	    color:rgb(0,0,0);
+        display: inline;
+        letter-spacing: .08rem;
+        padding: 10px;
+    }
+    
+    nav li a:hover {
+        color: rgb(70,193,255);
+    }
+}
+
+/*mobile size- change nav to a menu*/
+@media screen and (max-width: 725px) {
+  nav {
+      grid-area: nav;
+      background-color: rgba(0);
+      text-align: center;
+      width:100%;
+   }
+    
+    label {
+        display:block;
+        cursor:pointer;
+        font-size: 20px;
+        color:black;
+        float: left;
+        margin-left: 20px;
+        position: relative;
+    }
+    
+    #toggle{
+        display:none;
+    }
+    
+    nav #menu{
+        display: none;
+        width: 100%
+        clear: left;
+    }
+    
+    nav ol{
+        list-style: none;
+        margin:0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    nav li{
+        display: block;
+        padding: 5px;
+    }
+    
+    nav li a {
+        font-family: sans-serif;
+        font-size:1em;
+	    color:rgb(0);
+        margin:20px;
+	    height:30px;
+        display: inline-block;
+        letter-spacing: .13rem;
+        padding: 10px;
+    }
+    
+    #toggle: checked + #menu{
+        display:block;
+    }
+   
+}
