@@ -68,7 +68,7 @@ main{
 	margin: auto;
 	}
 
-/* main: take action now section*/
+/* add 3 sessions to Main page*/
 .TakeActionNow_container, .AboutUs_container, .WhyCleanup_container{
     position: relative;
 }
@@ -108,6 +108,7 @@ main{
   cursor: pointer;
   border-radius: 18px;
 }
+
 #TakeActionNow_btn{
   bottom: 26%;
   left: 3.5%;
@@ -152,7 +153,7 @@ main{
     position: absolute;
     height: 10%;
     transform: rotate(180deg);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 150' preserveAspectRatio='none' style='height: 100%25; width: 100%25;'%3E%3Cpath d='M-6.49,49.83 C233.35,-153.45 180.86,334.03 505.36,66.61 L500.00,150.00 L0.00,150.00 Z' style='stroke: none; fill: %2332c1ff;'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 150' preserveAspectRatio='none' style='height: 100%25; width: 100%25;'%3E%3Cpath d='M-6.49,49.83 C233.35,-153.45 180.86,334.03 505.36,66.61 L500.00,150.00 L0.00,150.00 Z' style='stroke: none; fill: %23FFFFFF;'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .TakeActionNow_container:after, .AboutUs_container:after, .WhyCleanup_container:after{
@@ -163,7 +164,7 @@ main{
     display: block;
     position: absolute;
     height: 10%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 150' preserveAspectRatio='none' style='height: 100%25; width: 100%25;'%3E%3Cpath d='M-6.49,49.83 C233.35,-153.45 180.86,334.03 505.36,66.61 L500.00,150.00 L0.00,150.00 Z' style='stroke: none; fill: %2332c1ff;'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 150' preserveAspectRatio='none' style='height: 100%25; width: 100%25;'%3E%3Cpath d='M-6.49,49.83 C233.35,-153.45 180.86,334.03 505.36,66.61 L500.00,150.00 L0.00,150.00 Z' style='stroke: none; fill: %23FFFFFF;'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .wave_container{
@@ -172,7 +173,7 @@ main{
     display: flex;
     padding-top: 12%;
     padding-bottom: 12%;
-    background-color: #32c1ff;
+    background-color: #FFFFFF;
 }
 
 .wave_container h2{
@@ -187,7 +188,7 @@ main{
 }
 
 .CleanupTogether_container{
-    background-color: #32c1ff;
+    background-color: #FFFFFF;
     height: 600px;
     max-width:100%;
     position:relative;
